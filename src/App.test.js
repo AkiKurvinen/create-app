@@ -1,17 +1,18 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { configure } from '@testing-library/dom'
 import App from './App';
-configure({
+export const test_config = {
   testIdAttribute: 'data-my-test-attribute',
   asyncUtilTimeout: 5000
-})
+}
+configure(test_config)
 
 test('renders learn react link', async () => {
   render(<App />);
   await waitFor(() => {
-    const elem = screen.getByTestId('edit-name')
-    expect(elem).not.toBeDisabled()
-    expect(elem).toHaveTextContent('Edit')
+    const edit_name_btn = screen.getByTestId('edit-name')
+    expect(edit_name_btn).not.toBeDisabled()
+    expect(edit_name_btn).toHaveTextContent('Edit')
   })
   //  await waitFor(() => { expect(screen.getByTestId('edit-name')).not.toBeDisabled() }, { timeout: 5000 })
 });

@@ -14,7 +14,7 @@ function unstyledScoreForm({label, edit, loggedin, className}){
     <form className={className}>
         
         {label && <Typography variant="body1">{label}</Typography>}
-        {edit ? <TextField label="Character name"></TextField> : <Typography variant='overline'>Character name</Typography>}
+        {edit ? <TextField label="Character name" data-my-test-attribute="char-name-input"></TextField> : <Typography variant='overline' data-my-test-attribute="char-name">Character name</Typography>}
         {loggedin && <Button variant="contained" data-my-test-attribute="edit-name" endIcon={<EditIcon />}>Edit</Button>}
         {edit && <Button variant="contained" data-my-test-attribute="save-changes">Save</Button>}
 
