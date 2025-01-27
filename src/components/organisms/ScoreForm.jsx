@@ -15,17 +15,17 @@ function unstyledScoreForm({label, edit, loggedin, className}){
         
         {label && <Typography variant="body1">{label}</Typography>}
         {edit ? <TextField label="Character name"></TextField> : <Typography variant='overline'>Character name</Typography>}
-        {loggedin && <Button variant="contained" data-my-test-attribute="other" endIcon={<EditIcon />}>Edit</Button>}
+        {loggedin && <Button variant="contained" data-my-test-attribute="edit-name" endIcon={<EditIcon />}>Edit</Button>}
         {edit && <Button variant="contained" data-my-test-attribute="save-changes">Save</Button>}
 
     </form>
     )
 }
 export const ScoreFormSkeleton = ()=>{
-    return <>
+    return <div data-my-test-attribute='skeleton'>
     <Skeleton width={'100%'} height={'2.5em'} count={2}/>
     <Skeleton width={'80%'} height={'2.5em'} count={1}/>
-    </>
+    </div>
 }
 
 export const ScoreForm = styled(unstyledScoreForm)`
