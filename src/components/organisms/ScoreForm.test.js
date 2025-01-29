@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { ScoreForm } from './ScoreForm'
-import { configure } from '@testing-library/dom'
+import { configure } from '@testing-library/react'
 import { test_config } from '../../App.test'
 configure(test_config)
 describe('AddWord component', () => {
