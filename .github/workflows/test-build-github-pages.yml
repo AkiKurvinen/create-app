@@ -1,3 +1,6 @@
+# Automatically creates gh-pages branch
+# Set GitHub Pages to deploy from gh-pages branch
+
 name: React App CI/CD
 
 on:
