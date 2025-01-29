@@ -8,12 +8,12 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 
-
+// {label && <Typography variant="body1">{label}</Typography>}
 function unstyledScoreForm({label, edit, loggedin, className}){
     return(
     <form className={className}>
         
-        {label && <Typography variant="body1">{label}</Typography>}
+        {label && <p>{label}</p>}
         {edit ? <TextField label="Character name" data-my-test-attribute="char-name-input"></TextField> : <Typography variant='overline' data-my-test-attribute="char-name">Character name</Typography>}
         {loggedin && <Button variant="contained" data-my-test-attribute="edit-name" endIcon={<EditIcon />}>Edit</Button>}
         {edit && <Button variant="contained" data-my-test-attribute="save-changes">Save</Button>}
