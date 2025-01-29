@@ -4,10 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: 
-      - main
       - master
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-test-deploy:
@@ -38,14 +37,14 @@ jobs:
 
       # Configure GitHub Pages
       - name: Configure GitHub Pages
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         run: |
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
