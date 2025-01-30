@@ -1,7 +1,8 @@
-import { ScoreFormController } from './components/organisms/ScoreFormController.jsx'
+import { CharacterFormController } from './components/organisms/CharacterFormController.jsx'
 import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-const theme = createTheme({
+export const customTheme = createTheme({
+  cssVariables: true,
   palette: {
     mode: 'light',
     primary: {
@@ -13,8 +14,8 @@ const theme = createTheme({
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <ScoreFormController />
+      <ThemeProvider theme={customTheme}>
+        <CharacterFormController />
       </ThemeProvider>
     </div>
   );

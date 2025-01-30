@@ -1,20 +1,22 @@
 
-import  {ScoreForm,ScoreFormSkeleton}  from './ScoreForm';
+import  {CharacterForm, CharacterFormSkeleton}  from './CharacterForm';
 
 const meta = {
-  title: 'organisms/ScoreForm',
-  component: ScoreForm,
+  title: 'organisms/CharacterForm',
+  component: CharacterForm,
   tags: ['autodocs'],
 };
 export default meta
 export const Preview = {
   args: {
     label: 'Any form label',
+    charactername: 'Test Name'
   },
 };
 export const LoggedIn = {
   args: {
     label: 'Any form label',
+    charactername: 'Test Name',
     loggedin: true
   },
 };
@@ -22,9 +24,10 @@ export const LoggedIn = {
 export const Edit = {
   args: {
     label: 'Any form label',
+    tempcharname: 'Test Name',
     edit: true
   },
 };
 export const Loading = {
-   render: () => <ScoreFormSkeleton />,
+   render: () => <CharacterFormSkeleton />,
 }
