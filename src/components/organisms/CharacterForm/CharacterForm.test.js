@@ -1,8 +1,9 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { CharacterForm } from './CharacterForm'
 import { configure } from '@testing-library/react'
-import { test_config } from '../../App.test'
+import { test_config } from '../../../App.test'
 configure(test_config)
+
 describe('AddWord component', () => {
     it('should display character name text', () => {
         render(<CharacterForm />);
