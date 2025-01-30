@@ -1,4 +1,4 @@
-import { CharacterFormController } from './components/organisms/CharacterFormController.jsx'
+import { CharacterFormController } from './components/organisms/CharacterForm/CharacterFormController.jsx'
 import './App.css';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export const customTheme = createTheme({
@@ -9,6 +9,9 @@ export const customTheme = createTheme({
       main: '#75196f'
     },
   },
+  shape: {
+    borderRadius: 0
+  }
 });
 
 function App() {

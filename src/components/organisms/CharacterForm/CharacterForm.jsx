@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
-import Button from '@mui/material/Button';
+import {Button} from '../../../atoms/Button/Button';
 import EditIcon from '@mui/icons-material/Edit';
 import Typography from '@mui/material/Typography';
 import { TextField } from '@mui/material';
